@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assingment4</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <div class="navbar bg-sky-200 w-[95%] mx-auto pt-8">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <label tabindex="0" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </label>
+
+                </div>
+                <p class="text-xl font-semibold">Interactive <br>
+                    <span class="font-medium ">Geometry Genius</span>
+                </p>
+            </div>
+
+            <div class="navbar-end">
+                <a id="blog" class="btn px-8  my-2 bg-sky-600 hover:bg-sky-800">Blog</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="lg:w-[95%] w-full mx-auto mt-8 pb-8 lg:pb-8 flex flex-col  md:flex-row lg:flex-row">
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-3 w-full px-3 lg:px-0 lg:w-[80%] ">
+                <div id="random-color1"  class="card card-compact w-full bg-base-100 shadow-xl bg-pink-400">
+                    <figure><img class="w-[60%] pt-3" src="./images/triangle.png" alt="Shoes" /></figure>
+                    <div  class="card-body ">
+                        <h2 id="triangle-name" class="text-center lg:text-center font-bold text-2xl">Triangle</h2>
+                        <p class="text-center lg:text-center text-lg">Area (A) = 0.5 x b x h</p>
+                        <div class="flex flex-row md:flex-row lg:flex-row">
+                            <input class="w-[20%] py-1 rounded ml-3 px-2  type= " text" name="" id="triangle-first-value"
+                                placeholder="b">
+                            <p class="ml-2 text-lg">cm</p>
+                            <input class="w-[20%] py-1  px-2  rounded type= " text" name="" id="triangle-second-value"
+                                placeholder="h">
+                            <p class="ml-2 text-lg">cm</p>
+                        </div>
+                        <div class="mt-3">
+                            <button id="btn-triangle"
+                                class="btn bg-sky-400 border-sky-400  text-lg w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="random-color2" class="card card-compact w-full bg-base-100 shadow-xl ">
+                    <figure><img class="w-[60%] pt-12" src="./images/rectangle.png" alt="Shoes" /></figure>
+                    <div  class="card-body ">
+                        <h2 id="rectangle-name" class="text-center font-bold text-2xl">Rectangle</h2>
+                        <p class="text-center text-lg">Area (A) = w x l</p>
+                        <div class="flex flex-row md:flex-row lg:flex-row">
+                            <input class="w-[20%] py-1 rounded ml-3 px-2  type= " text" name=""
+                                id="first-rectangle-value" placeholder="w">
+                            <p class="ml-2 text-lg">cm</p>
+                            <input class="w-[20%] py-1  px-2  rounded type= " text" name="" id="second-rectangle-value"
+                                placeholder="l">
+                            <p class="ml-2 text-lg">cm</p>
+                        </div>
+                        <div class="mt-3">
+                            <button id="btn-rectangle"
+                                class="btn bg-sky-400 border-sky-400 text-lg w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="random-color3" class="card card-compact w-full bg-base-100 shadow-xl ">
+                    <figure><img class="w-[60%] pt-12" src="./images/parallelogram.png" alt="Shoes" /></figure>
+                    <div  class="card-body ">
+                        <h2 id="parallelogram-name" class="text-center font-bold text-2xl">Parallelogram</h2>
+                        <p class="text-center text-lg">Area (A) = b x h</p>
+                        <div class="flex flex-row md:flex-row lg:flex-row">
+                            <input class="w-[20%] py-1 rounded ml-3 px-2  type= " text" name="" id="parallelogram-first-value" placeholder="b">
+                            <p class="ml-2 text-lg">cm</p>
+                            <input class="w-[20%] py-1  px-2  rounded type= " text" name="" id="parallelogram-second-value" placeholder="h">
+                            <p class="ml-2 text-lg">cm</p>
+                        </div>
+                        <div class="mt-3">
+                            <button id="btn-parallelogram" class="btn bg-sky-400 border-sky-400 text-lg w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="random-color4" class="card card-compact w-full bg-base-100 shadow-xl bg-sky-500">
+                    <figure><img class="w-[60%] pt-12" src="./images/rhombus.png" alt="Shoes" /></figure>
+                    <div  class="card-body ">
+                        <h2 id="rhombus-name" class="text-center font-bold text-2xl">Rhombus</h2>
+                        <p class="text-center text-lg">Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
+                        <div class="flex flex-row md:flex-row lg:flex-row">
+                            <input class="w-[20%] py-1 rounded ml-3 px-2  type= " text" name="" id="rhombus-first-value" placeholder="d1">
+                            <p class="ml-2 text-lg">cm</p>
+                            <input class="w-[20%] py-1  px-2  rounded type= " text" name="" id="rhombus-second-value" placeholder="d2">
+                            <p class="ml-2 text-lg">cm</p>
+                        </div>
+                        <div class="mt-3">
+                            <button id="btn-rhombus" class="btn bg-sky-400 border-sky-400 text-lg w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="random-color5" class="card card-compact w-full bg-base-100 shadow-xl ">
+                    <figure><img class="w-[60%] pt-8" src="./images/pentagon.png" alt="Shoes" /></figure>
+                    <div  class="card-body ">
+                        <h2 id="pentagon-name" class="text-center font-bold text-2xl">Pentagon</h2>
+                        <p class="text-center text-lg">Area (A) = 0.5 x p x b</p>
+                        <div class="flex flex-row md:flex-row lg:flex-row">
+                            <input class="w-[20%] py-1 rounded ml-3 px-2  type= " text" name="" id="pentagon-first-value" placeholder="p">
+                            <p class="ml-2 text-lg">cm</p>
+                            <input class="w-[20%] py-1  px-2  rounded type= " text" name="" id="pentagon-second-value" placeholder="b">
+                            <p class="ml-2 text-lg">cm</p>
+                        </div>
+                        <div class="mt-3">
+                            <button id="btn-pentagon" class="btn bg-sky-400 border-sky-400 text-lg w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="random-color6" class="card card-compact w-full bg-base-100 shadow-xl ">
+                    <figure><img class="w-[60%] pt-20" src="./images/ellipse.png" alt="Shoes" /></figure>
+                    <div  class="card-body ">
+                        <h2 id="ellipse-name" class="text-center font-bold text-2xl">Ellipse</h2>
+                        <p class="text-center text-lg">Area (A) = ℼ x a x b</p>
+                        <div class="flex flex-row md:flex-row lg:flex-row">
+                            <input class="w-[20%] py-1 rounded ml-3 px-2  type= " text" name="" id="ellipse-first-value" placeholder="a">
+                            <p class="ml-2 text-lg">cm</p>
+                            <input class="w-[20%] py-1  px-2  rounded type= " text" name="" id="ellipse-second-value" placeholder="b">
+                            <p class="ml-2 text-lg">cm</p>
+                        </div>
+                        <div class="mt-3">
+                            <button id="btn-ellipse" class="btn bg-sky-400 border-sky-400 text-lg w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="w-full md:w-[30%] lg:w-[40%] ml-3">
+                <div class="overflow-x-auto  border mx-auto mt-8 lg:mt-0">
+                    <table class="table w-full mt-3">
+                        <h1 class="font-bold text-center  text-xl underline">Area Calculation</h1>
+                        <!-- head -->
+                        <thead>
+                            <tr>
+                                <!-- <th></th>
+                                <th>No</th>
+                                <th>Name</th>
+                                <th> Color</th> -->
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+                            <!-- row 1 -->
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
